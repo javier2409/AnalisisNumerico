@@ -1,4 +1,9 @@
 
+
+```python
+from IPython.display import display,Math
+```
+
 Introducción
 ------------------
 
@@ -6,11 +11,25 @@ Se plantea resolver la evolución temporal de la temperatura de un tubo metálic
 
 Por la ley de conservación de la energía obtenemos la siguiente ecuación diferencial:
 
-$-mC \frac{dT}{dt} = h_c S (T-T_\infty ) + \sigma \epsilon S (T^4 - T_\infty ^4)$
+
+```python
+display(Math(r'$-mC \frac{dT}{dt} = h_c S (T-T_\infty ) + \sigma \epsilon S (T^4 - T_\infty ^4)$'))
+```
+
+
+$$-mC \frac{dT}{dt} = h_c S (T-T_\infty ) + \sigma \epsilon S (T^4 - T_\infty ^4)$$
+
 
 Para resolverla vamos a utilizar los métodos de Euler y Runge-Kutta de orden 4, por lo que reescribimos la ecuación de la siguiente forma:
 
-$\frac{dT}{dt} = f(t,T) = -[\frac{h_c}{mC} S (T-T_\infty ) + \frac{\sigma \epsilon S}{mC} (T^4 - T_\infty ^4)]$
+
+```python
+display(Math(r'$\frac{dT}{dt} = f(t,T) = -[\frac{h_c}{mC} S (T-T_\infty ) + \frac{\sigma \epsilon S}{mC} (T^4 - T_\infty ^4)]$'))
+```
+
+
+$$\frac{dT}{dt} = f(t,T) = -[\frac{h_c}{mC} S (T-T_\infty ) + \frac{\sigma \epsilon S}{mC} (T^4 - T_\infty ^4)]$$
+
 
 Importamos las librerías que vamos a utilizar
 
@@ -62,7 +81,7 @@ plt.grid(True)
 ```
 
 
-![png](output_12_0.png)
+![png](output_13_0.png)
 
 
 Método de Runge-Kutta de orden 4
@@ -100,7 +119,7 @@ plt.grid(True)
 ```
 
 
-![png](output_16_0.png)
+![png](output_17_0.png)
 
 
 Punto 1
@@ -199,12 +218,12 @@ plt.title('Comparación entre las soluciones de ambos metodos y la solución ana
 
 
 
-    Text(0.5,1,'Comparación entre las soluciones de ambos metodos y la solución analítica')
+    Text(0.5, 1.0, 'Comparación entre las soluciones de ambos metodos y la solución analítica')
 
 
 
 
-![png](output_30_1.png)
+![png](output_31_1.png)
 
 
 ### Ítem 1b
@@ -226,12 +245,12 @@ plt.title('Error relativo en función de los minutos')
 
 
 
-    Text(0.5,1,'Error relativo en función de los minutos')
+    Text(0.5, 1.0, 'Error relativo en función de los minutos')
 
 
 
 
-![png](output_33_1.png)
+![png](output_34_1.png)
 
 
 ### Ítem 1c
@@ -318,12 +337,12 @@ plt.title('Comparación entre la solución con intercambio radiactivo y la soluc
 
 
 
-    Text(0.5,1,'Comparación entre la solución con intercambio radiactivo y la solución analítica sin intercambio radiactivo')
+    Text(0.5, 1.0, 'Comparación entre la solución con intercambio radiactivo y la solución analítica sin intercambio radiactivo')
 
 
 
 
-![png](output_46_1.png)
+![png](output_47_1.png)
 
 
 Vemos que el intercambio de radiación **NO** es despreciable
@@ -430,7 +449,7 @@ soaking(1070,971)
 
 
 
-![png](output_59_1.png)
+![png](output_60_1.png)
 
 
 Punto 4
@@ -511,7 +530,7 @@ soaking(1080,969,23)
 
 
 
-![png](output_67_1.png)
+![png](output_68_1.png)
 
 
 Punto 5
